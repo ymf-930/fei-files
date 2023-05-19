@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrap">
     <div class="left-menu">
-      <b-menu
+      <f-menu
         :uniqueOpened="true"
         :default-active="active"
         class="b-menu-vertical-demo"
@@ -10,15 +10,15 @@
         active-text-color="#ffd04b"
         @select="handleSelect"
       >
-        <b-menu-item v-for="item in imageMenu" :key="item.index" :index="item.index">
-          <b-icon :name="item.icon"></b-icon>
+        <f-menu-item v-for="item in imageMenu" :key="item.index" :index="item.index">
+          <f-icon :name="item.icon"></f-icon>
           <template #title>{{ item.name }}</template>
-        </b-menu-item>
-      </b-menu>
+        </f-menu-item>
+      </f-menu>
     </div>
     <div class="right-content">
       <div class="t-right pr-24">
-        <b-button type="primary" @click="exportJson">导出当前配置文件</b-button>
+        <f-button type="primary" @click="exportJson">导出当前配置文件</f-button>
       </div>
       <div class="images-wrap">
         <div v-for="item in previewImages" :key="item.id" class="image-item" @click="copyUrl(item)">
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div style="height: 500px;" v-if="previewImages.length ===0 ">
-        <b-empty>暂无图片资源</b-empty>
+        <f-empty>暂无图片资源</f-empty>
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@
 
 <script>
 import { ref, computed } from 'vue'
-import { Message, Utils } from 'bin-ui-next'
+import { Message, Utils } from 'f-ui-one'
 import { presetImages, imageMenu } from '@/config'
 
 export default {
