@@ -1,13 +1,13 @@
 <template>
   <div class="main-wrap">
     <div class="left-menu">
+      <div class="logo" flex="cross:center">
+        <img class="icon" src="../src/assets/images/logo.svg" alt="logo">
+        <h1>FEI-FILES</h1></div>
       <f-menu
         :uniqueOpened="true"
         :default-active="active"
         class="b-menu-vertical-demo"
-        background-color="#111417"
-        text-color="#fff"
-        active-text-color="#ffd04b"
         @select="handleSelect"
       >
         <f-menu-item v-for="item in imageMenu" :key="item.index" :index="item.index">
@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import { ref, computed } from 'vue'
-import { Message, Utils } from 'f-ui-one'
-import { presetImages, imageMenu } from '@/config'
+import {ref, computed} from 'vue'
+import {Message, Utils} from 'f-ui-one'
+import {presetImages, imageMenu} from '@/config'
 
 export default {
   name: 'App',

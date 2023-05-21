@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
 }
+
 body {
   margin: 0;
   height: 100%;
@@ -11,24 +12,29 @@ body {
   text-rendering: optimizeLegibility;
   color: #515a6e;
 }
+
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 ul li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 a {
   cursor: pointer;
   color: getColor();
   text-decoration: none;
 }
+
 a:focus, a:hover {
   color: getHover();
 }
+
 #app {
   min-height: 100%;
 }
@@ -36,10 +42,12 @@ a:focus, a:hover {
 a:active, a:focus, button, div, span, svg {
   outline: 0 !important;
 }
+
 img[lazy=loading] {
   width: 50px;
   height: 50px;
 }
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
@@ -48,17 +56,62 @@ img[lazy=loading] {
 ::-webkit-scrollbar-corner {
   display: none;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #434b55;
 }
+
 .main-wrap {
   display: flex;
   min-height: 100vh;
+
   .left-menu {
     width: 220px;
     background #111417;
     border-right: 1px solid rgba(255, 255, 255, 0.25);
+
+    .logo {
+      position: relative;
+      width: 100%;
+      height: 48px;
+      overflow: hidden;
+      padding-left: 14px;
+
+      .icon {
+        width: 36px;
+      }
+
+      h1 {
+        color #fff;
+        font-size: 16px;
+        margin: 0 0 0 8px;
+        white-space: nowrap;
+      }
+    }
+
+    .fei-menu {
+      background: #111417;
+
+      .fei-menu-item {
+        border-radius: 8px;
+        margin: 4px;
+        color #ffffffbf;
+
+        &:focus, &:hover {
+          outline: 0;
+          color: #fff;
+          background: #3366ff;
+        }
+
+        &.is-active {
+          color: #fff;
+          background: #3366ff;
+        }
+      }
+    }
+
   }
+
   .right-content {
     width: calc(100% - 220px);
     height: 100vh;
@@ -67,11 +120,14 @@ img[lazy=loading] {
     padding-top: 24px;
     padding-right: 24px;
   }
+
   .images-wrap {
     display: flex;
     flex-wrap: wrap;
+
     .image-item {
       box-sizing: border-box;
+      border-radius: 14px;
       width: 100%;
       height: 240px;
       padding: 8px 0 0 24px;
@@ -84,6 +140,7 @@ img[lazy=loading] {
       line-height: 24px;
       font-size: 14px;
       cursor: pointer;
+
       &:hover {
         .select-image {
           background: #303640;
@@ -93,9 +150,11 @@ img[lazy=loading] {
           color: #fff;
         }
       }
+
       .select-image {
         width: 100%;
         height: 200px;
+        border-radius: 14px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -103,6 +162,7 @@ img[lazy=loading] {
         object-fit: contain;
         transition: .2s;
       }
+
       > span {
         width: 100%;
         height: 20px;
