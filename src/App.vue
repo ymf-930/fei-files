@@ -2,7 +2,7 @@
   <div class="main-wrap">
     <div class="left-menu">
       <div class="logo" flex="cross:center">
-        <img class="icon" src="../src/assets/images/logo.svg" alt="logo">
+        <img class="icon" src="../src/assets/images/fei-logo.png" alt="logo">
         <h1>FEI-FILES</h1></div>
       <f-menu
         :uniqueOpened="true"
